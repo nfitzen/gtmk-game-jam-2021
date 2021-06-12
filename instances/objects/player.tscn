@@ -77,8 +77,11 @@ visible = false
 visible = false
 texture = ExtResource( 2 )
 
-[node name="Sprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1 )
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( -0.866025, 0.5, 0, -0.5, -0.866025, 0, 0, 0, 1, 1.343, 1.694, 0 )
+
+[node name="Sprite3D" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
 flip_h = true
 pixel_size = 0.05
 alpha_cut = 2
@@ -87,17 +90,18 @@ animation = "walk"
 frame = 3
 playing = true
 
-[node name="Sprite3D2" type="AnimatedSprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.3 )
+[node name="Sprite3D2" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 flip_h = true
 pixel_size = 0.05
 alpha_cut = 2
 frames = SubResource( 8 )
 animation = "walk"
+frame = 1
 playing = true
 
-[node name="Sprite3D3" type="AnimatedSprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
+[node name="Sprite3D3" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8 )
 flip_h = true
 pixel_size = 0.05
 alpha_cut = 2
