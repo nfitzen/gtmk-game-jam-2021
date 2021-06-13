@@ -14,6 +14,7 @@ var count = 6
 
 func _ready():
     place_enemies()
+    queue_free()
 
 func place_enemies():
     var angle
