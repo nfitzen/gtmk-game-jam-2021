@@ -9,12 +9,8 @@ Source: https://github.com/nfitzen/gtmk-game-jam-2021
 # Copyright: $YEAR $NAME <$CONTACT>
 # License: ...
 
-Files: src/project.godot
+Files: src/project.godot src/default_env.tres src/*.tscn src/*.import
 Copyright: 2021 daatguy, UnrelatedString, and nfitzen
-License: GPL-3.0-or-later
-
-Files: src/default_env.tres src/*.tscn src/*.import
-Copyright: 2021 daatguy and UnrelatedString
 License: GPL-3.0-or-later
 
 Files: src/assets/sprites/*
