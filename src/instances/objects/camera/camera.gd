@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 daatguy
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 extends Camera2D
 
 var maxSpeed = 0.07;
@@ -13,7 +17,7 @@ func _ready():
 
 # Dont ask why its physics process
 # Actually if you really want to know,
-# its because regular process makes children 
+# its because regular process makes children
 # lag behind the parent 1 frame for some god forsaken reason
 func _physics_process(delta):
     if(nextFramePos!=null):

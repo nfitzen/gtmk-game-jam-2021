@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021 UnrelatedString
+# SPDX-FileCopyrightText: 2021 UnrelatedString, daatguy, and nfitzen
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -37,7 +37,7 @@ func _physics_process(delta):
     var velocity = Vector2(right-left, down-up).normalized() * speed
     velocity.y *= vertical_mul
     move_and_slide(velocity)
-    
+
 
 func add_rat():
     var rat = post_this_rat.instance()

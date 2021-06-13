@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 daatguy and UnrelatedString
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 extends RigidBody2D
 
 var center
@@ -20,7 +24,7 @@ func _physics_process(delta):
     var to_center = position.direction_to(center.position)
     # Tails
     manage_tail(position.distance_to(center.position))
-    
+
     linear_velocity = to_center * (
             position.distance_to(center.position) - center.wheel_radius
         ) * 9
@@ -37,7 +41,7 @@ func _physics_process(delta):
     if abs(angular_velocity) > PI:
         angular_velocity -= stepify(angular_velocity, PI) # if you're wondering why this isn't just fmod, that's a good question
     angular_velocity *= 15
-    
+
     var cw = int(Input.is_action_pressed("turn_cw"))
     var ccw = int(Input.is_action_pressed("turn_ccw"))
     linear_velocity += position.direction_to(center.position).tangent() * (cw - ccw) * 120
