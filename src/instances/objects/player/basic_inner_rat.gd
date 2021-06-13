@@ -1,7 +1,9 @@
-extends KinematicBody2D
+extends RigidBody2D
 
-var index
+var center
+export var ass = Vector2(0,0)
 
-func _on_player_adjust():
-    position = Vector2($"../..".wheel_radius, 0).rotated(TAU*index/$"..".get_child_count())
-    print(index)
+func _physics_process(delta):
+    var force = position.direction_to(center.position)
+    force *= position.distance_to(center.position) - 100
+    add_force(ass, force)

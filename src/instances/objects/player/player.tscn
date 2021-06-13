@@ -23,5 +23,3 @@ post_this_rat = ExtResource( 3 )
 
 [node name="the rat" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-
-[node name="other rats" type="Node2D" parent="."]
