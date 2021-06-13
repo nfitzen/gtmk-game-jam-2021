@@ -11,6 +11,7 @@ animations = [ {
 } ]
 
 [node name="basic_inner_rat" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )

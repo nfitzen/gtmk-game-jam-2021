@@ -14,7 +14,7 @@ func _ready():
 
 func _process(delta):
     # lmao
-    if Input.is_key_pressed(32):
+    if Input.is_action_just_pressed("testing_space"):
         add_rat()
 
 func _physics_process(delta):
@@ -28,4 +28,4 @@ func _physics_process(delta):
     
 func add_rat():
     var new_rat = post_this_rat.instance()
-    $"./other rats".add_child(new_rat)
+    $"./other rats".call_deferred("add_child",new_rat)
