@@ -30,6 +30,7 @@ post_this_bullet = ExtResource( 3 )
 [node name="sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "walk0"
+playing = true
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708

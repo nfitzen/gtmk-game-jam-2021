@@ -17,7 +17,9 @@ var shootMax = 0.3
 signal rotate
 
 func _ready():
-    pass # Replace with function body.
+    add_rat()
+    add_rat()
+    add_rat()
 
 func _process(delta):
     # lmao

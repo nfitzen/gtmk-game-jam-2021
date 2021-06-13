@@ -15,6 +15,8 @@ func _physics_process(delta):
 func _on_area_entered(body):
     if(body.is_in_group("bannerenemy")):
         body.health -=1
+        if(body.health==0):
+            $"../player".add_rat()
     else:
         body.queue_free()
     queue_free()
