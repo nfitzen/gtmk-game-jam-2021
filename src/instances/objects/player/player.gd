@@ -9,4 +9,3 @@ func _process(delta):
     var up = int(Input.is_action_pressed("up"))
     var down = int(Input.is_action_pressed("down"))
     position += Vector2(right-left, down-up) * delta * 100
-    print(position)
