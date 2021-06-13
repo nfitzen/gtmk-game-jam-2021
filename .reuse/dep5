@@ -14,7 +14,7 @@ Copyright: 2021 daatguy, UnrelatedString, and nfitzen
 License: GPL-3.0-or-later
 
 Files: src/default_env.tres src/*.tscn src/*.import
-Copyright: 2021 daatguy and UnrelatedString
+Copyright: 2021 daatguy, UnrelatedString, and nfitzen
 License: GPL-3.0-or-later
 
 Files: src/assets/sprites/*
