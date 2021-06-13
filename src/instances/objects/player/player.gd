@@ -23,8 +23,7 @@ func _ready():
 
 func _process(delta):
     # lmao
-    if Input.is_action_just_pressed("testing_space"):
-        add_rat()
+    #if Input.is_action_just_pressed("testing_space"):    add_rat()
     $"clump".frame = int(clamp(len(rats),0,9))
     $"../camera".zoomTarget = cameraZoom*wheel_radius/60.0
     #$"clump".scale = Vector2(1,1)*pow(wheel_radius,1.2)/40

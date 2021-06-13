@@ -16,8 +16,8 @@ func _ready():
 
 func _process(_delta):
 
-    if Input.is_action_just_pressed("test_damage"):
-        health -= 1
+    #if Input.is_action_just_pressed("test_damage"):
+    #    health -= 1
 
     if health <= 0:
         emit_signal("banner_killed")
