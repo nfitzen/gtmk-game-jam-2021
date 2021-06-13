@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 export var speed = 200
 export var vertical_mul = 1.0 # if we want to account for the perspective or some shit
-export var wheel_radius = 40
+export var wheel_radius = 60
 export var post_this_rat : PackedScene
 var rats = []
 

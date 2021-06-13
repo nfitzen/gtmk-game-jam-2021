@@ -10,10 +10,11 @@ func _physics_process(delta):
             position.distance_to(center.position) - center.wheel_radius
         ) * 9
     if position.distance_to(center.position) < center.wheel_radius:
-        linear_velocity *= 10 * len(center.rats)
+        linear_velocity *= 3 * len(center.rats)
     for rat in center.rats:
         if rat != self:
-            var nudge = rat.position.direction_to(position) * 500
+            var nudge = rat.position.direction_to(position) * 100
             #nudge /= position.distance_to(rat.position)
-            nudge -= to_center * nudge.dot(to_center)
+            # MOSTLY remove parallel component
+            nudge -= to_center * nudge.dot(to_center) * .8
             linear_velocity += nudge
