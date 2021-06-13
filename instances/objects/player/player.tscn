@@ -1,129 +1,101 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://instances/objects/player/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/missing.png" type="Texture" id=2]
-
-[sub_resource type="AtlasTexture" id=8]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=9]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 0, 96, 64 )
-
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 9 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=10]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 64, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=11]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 64, 96, 64 )
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ SubResource( 10 ), SubResource( 11 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
+[ext_resource path="res://assets/sprites/rat.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/tail.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=12]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 128, 96, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=13]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 128, 96, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 32, 0, 32, 32 )
 
-[sub_resource type="SpriteFrames" id=7]
-animations = [ {
-"frames": [ SubResource( 12 ), SubResource( 13 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
+[sub_resource type="AtlasTexture" id=14]
+flags = 19
+atlas = ExtResource( 4 )
+region = Rect2( 64, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=15]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 192, 96, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=16]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 192, 96, 64 )
-
-[sub_resource type="SpriteFrames" id=14]
-animations = [ {
-"frames": [ SubResource( 15 ), SubResource( 16 ) ],
-"loop": true,
-"name": "walk",
-"speed": 5.0
-} ]
+atlas = ExtResource( 4 )
+region = Rect2( 128, 0, 32, 32 )
 
 [sub_resource type="AtlasTexture" id=17]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 256, 96, 64 )
+atlas = ExtResource( 4 )
+region = Rect2( 160, 0, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=18]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 256, 96, 64 )
-
-[sub_resource type="SpriteFrames" id=19]
+[sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ SubResource( 17 ), SubResource( 18 ) ],
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
-"name": "walk",
+"name": "default",
 "speed": 5.0
 } ]
 
-[sub_resource type="AtlasTexture" id=20]
+[sub_resource type="AtlasTexture" id=2]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 320, 96, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 48, 48 )
 
-[sub_resource type="AtlasTexture" id=21]
+[sub_resource type="AtlasTexture" id=3]
 flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 320, 96, 64 )
+atlas = ExtResource( 3 )
+region = Rect2( 48, 96, 48, 48 )
 
-[sub_resource type="SpriteFrames" id=22]
+[sub_resource type="AtlasTexture" id=4]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 0, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 48, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 96, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 19
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "walk",
+"name": "idle",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "spit",
 "speed": 5.0
-} ]
-
-[sub_resource type="AtlasTexture" id=24]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 0, 384, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=25]
-flags = 19
-atlas = ExtResource( 2 )
-region = Rect2( 96, 384, 96, 64 )
-
-[sub_resource type="SpriteFrames" id=23]
-animations = [ {
-"frames": [ SubResource( 24 ), SubResource( 25 ) ],
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
@@ -140,69 +112,45 @@ visible = false
 texture = ExtResource( 2 )
 
 [node name="Spatial" type="Spatial" parent="."]
-transform = Transform( -0.866025, 0.5, 0, -0.5, -0.866025, 0, 0, 0, 1, 1.343, 1.694, 0 )
+
+[node name="Sprite3D5" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 1, 0, 0, -0.2 )
+pixel_size = 0.05
+alpha_cut = 2
+frames = SubResource( 11 )
+frame = 2
 
 [node name="Sprite3D" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.2 )
-flip_h = true
+transform = Transform( -0.866025, 0.5, 0, -0.499999, -0.866025, 0, 0, 0, 1, 1.26698, 0, -0.2 )
 pixel_size = 0.05
 alpha_cut = 2
-frames = SubResource( 1 )
-animation = "walk"
-playing = true
-
-[node name="Sprite3D2" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
-flip_h = true
-pixel_size = 0.05
-alpha_cut = 2
-frames = SubResource( 4 )
-animation = "walk"
+frames = SubResource( 10 )
+animation = "spit"
 frame = 1
 playing = true
 
 [node name="Sprite3D3" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.8 )
-flip_h = true
+transform = Transform( -0.861061, -0.5085, 0, 0.5085, -0.861061, 0, 0, 0, 1, 0.338383, -1.64879, -0.2 )
 pixel_size = 0.05
 alpha_cut = 2
-frames = SubResource( 7 )
-animation = "walk"
-playing = true
-
-[node name="Sprite3D4" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.9 )
-flip_h = true
-pixel_size = 0.05
-alpha_cut = 2
-frames = SubResource( 14 )
-animation = "walk"
-playing = true
-
-[node name="Sprite3D5" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
-flip_h = true
-pixel_size = 0.05
-alpha_cut = 2
-frames = SubResource( 19 )
-animation = "walk"
-playing = true
-
-[node name="Sprite3D6" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
-flip_h = true
-pixel_size = 0.05
-alpha_cut = 2
-frames = SubResource( 22 )
-animation = "walk"
+frames = SubResource( 10 )
+animation = "idle"
 frame = 1
 playing = true
 
-[node name="Sprite3D7" type="AnimatedSprite3D" parent="Spatial"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1 )
-flip_h = true
+[node name="Sprite3D4" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 0.896029, -0.443994, 0, 0.443994, 0.896029, 0, 0, 0, 1, -1.34102, 0.336919, -0.2 )
 pixel_size = 0.05
 alpha_cut = 2
-frames = SubResource( 23 )
+frames = SubResource( 10 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="Sprite3D2" type="AnimatedSprite3D" parent="Spatial"]
+transform = Transform( 0.59579, 0.80314, 0, -0.80314, 0.59579, 0, 0, 0, 1, 0, 1.70376, -0.2 )
+pixel_size = 0.05
+alpha_cut = 2
+frames = SubResource( 10 )
 animation = "walk"
 playing = true
