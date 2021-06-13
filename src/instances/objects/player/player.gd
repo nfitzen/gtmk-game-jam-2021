@@ -29,4 +29,5 @@ func _physics_process(delta):
 func add_rat():
     var rat = post_this_rat.instance()
     $"..".call_deferred("add_child", rat)
+    rat.position = position + Vector2(wheel_radius, 1)
     rat.center = self
