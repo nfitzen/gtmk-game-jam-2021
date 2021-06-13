@@ -1,0 +1,18 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: The Rat King
+Upstream-Contact: Nathaniel Fitzenrider <https://github.com/nfitzen>
+Source: https://github.com/nfitzen/gtmk-game-jam-2021
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+
+Files: src/project.godot src/default_env.tres src/*.tscn src/*.import
+Copyright: 2021 daatguy and UnrelatedString
+License: GPL-3.0-or-later
+
+Files: src/assets/*
+Copyright: 2021 daatguy
+License: GPL-3.0-or-later OR CC-BY-SA-4.0

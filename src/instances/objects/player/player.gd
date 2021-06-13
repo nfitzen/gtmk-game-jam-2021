@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 daatguy and UnrelatedString
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 extends Spatial
 
 # For locking rotaiion, for when you are just one rat
