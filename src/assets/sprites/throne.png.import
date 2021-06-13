@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rat.png-e780537a5ce9decc0105c76d6bf9f880.stex"
+path="res://.import/throne.png-0c9b440f09f2d4190eecade6221e3a39.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/rat.png"
-dest_files=[ "res://.import/rat.png-e780537a5ce9decc0105c76d6bf9f880.stex" ]
+source_file="res://assets/sprites/throne.png"
+dest_files=[ "res://.import/throne.png-0c9b440f09f2d4190eecade6221e3a39.stex" ]
 
 [params]
 

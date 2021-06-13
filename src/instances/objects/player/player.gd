@@ -19,6 +19,8 @@ func _process(delta):
     # lmao
     if Input.is_action_just_pressed("testing_space"):
         add_rat()
+    $"clump".frame = int(clamp(len(rats),0,9))
+    #$"clump".scale = Vector2(1,1)*pow(wheel_radius,1.2)/40
 
 func _physics_process(delta):
     var right = int(Input.is_action_pressed("right"))

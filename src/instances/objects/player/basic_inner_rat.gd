@@ -3,9 +3,17 @@ extends RigidBody2D
 var center
 export var ass = Vector2(0,0)
 
+func manage_tail(dist):
+    $"tail".clear()
+    for i in range(int(dist/64*1.412)):
+        $"tail".set_cell(-1-i, i, $"tail".get_tileset().find_tile_by_name("tail"))
 
 func _physics_process(delta):
     var to_center = position.direction_to(center.position)
+    # Tails
+    manage_tail(position.distance_to(center.position))
+    
+    
     linear_velocity = to_center * (
             position.distance_to(center.position) - center.wheel_radius
         ) * 9
