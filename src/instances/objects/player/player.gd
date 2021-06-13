@@ -11,6 +11,8 @@ export var post_this_rat : PackedScene
 const cameraZoom = 0.48;
 var cameraTarget : Vector2 = position;
 var rats = []
+var shootTimer = 0.0
+var shootMax = 0.3
 
 signal rotate
 
@@ -37,6 +39,17 @@ func _physics_process(delta):
     var velocity = Vector2(right-left, down-up).normalized() * speed
     velocity.y *= vertical_mul
     move_and_slide(velocity)
+    
+    if(shootTimer>0.0):
+        shootTimer -= delta
+    if(shootTimer<0.0):
+        shootTimer = 0
+    
+    # Bulleting
+    if(Input.is_action_pressed("shoot") && shootTimer==0):
+        shootTimer = shootMax
+        for rat in rats:
+            rat.shoot() 
 
 
 func add_rat():
@@ -47,3 +60,11 @@ func add_rat():
     rats.append(rat)
     wheel_radius = max(wheel_radius, len(rats) * 15 / PI)
     connect("rotate", rat, "_on_player_rotate")
+    
+func remove_rat():
+    var rand_index : int = randi() % rats.size()
+    var removed_rat = rats[rand_index]
+    removed_rat.queue_free()
+    rats.remove(rand_index)
+    wheel_radius = max(wheel_radius, len(rats) * 15 / PI)
+    

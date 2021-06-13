@@ -6,6 +6,7 @@ extends RigidBody2D
 
 var center
 export var ass = Vector2(0,0)
+export var post_this_bullet : PackedScene
 
 func manage_tail(dist):
     $"tail".clear()
@@ -45,3 +46,10 @@ func _physics_process(delta):
     var cw = int(Input.is_action_pressed("turn_cw"))
     var ccw = int(Input.is_action_pressed("turn_ccw"))
     linear_velocity += position.direction_to(center.position).tangent() * (cw - ccw) * 120
+    
+        
+func shoot():
+    var bullet = post_this_bullet.instance()
+    bullet.vel = Vector2(1, 0).rotated(rotation)*3
+    bullet.position = get_global_position()+Vector2(1, 0).rotated(rotation)*12
+    $"..".call_deferred("add_child", bullet)
