@@ -33,5 +33,4 @@ func add_rat():
     rat.position = position + Vector2(wheel_radius + 25, 1)
     rat.center = self
     rats.append(rat)
-    if len(rats) > 13:
-        wheel_radius += 1
+    wheel_radius = max(wheel_radius, len(rats) * 4)
