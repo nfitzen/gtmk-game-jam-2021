@@ -21,4 +21,4 @@ func _physics_process(delta):
     angular_velocity = position.angle_to_point(center.position) - rotation
     if abs(angular_velocity) > PI:
         angular_velocity -= stepify(angular_velocity, PI) # if you're wondering why this isn't just fmod, that's a good question
-    angular_velocity *= 5 
+    angular_velocity *= 15
