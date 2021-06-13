@@ -18,3 +18,4 @@ func _physics_process(delta):
             # MOSTLY remove parallel component
             nudge -= to_center * nudge.dot(to_center) * .8
             linear_velocity += nudge
+    angular_velocity = (position.angle_to_point(center.position) - rotation) * 5
