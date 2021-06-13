@@ -6,8 +6,9 @@ extends KinematicBody2D
 
 export var speed = 200
 export var vertical_mul = 1.0 # if we want to account for the perspective or some shit
-export var wheel_radius = 150
+export var wheel_radius = 100
 export var post_this_rat : PackedScene
+var rats = []
 
 func _ready():
     pass # Replace with function body.
@@ -31,3 +32,6 @@ func add_rat():
     $"..".call_deferred("add_child", rat)
     rat.position = position + Vector2(wheel_radius, 1)
     rat.center = self
+    rats.append(rat)
+    if len(rats) > 9:
+        wheel_radius += 5
