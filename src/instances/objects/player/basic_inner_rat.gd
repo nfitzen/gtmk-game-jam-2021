@@ -5,5 +5,5 @@ export var ass = Vector2(0,0)
 
 func _physics_process(delta):
     var force = position.direction_to(center.position) * .1
-    force *= position.distance_to(center.position) - center.wheel_radius
+    force *= pow(position.distance_to(center.position) - center.wheel_radius, .5)
     add_force(ass, force)
