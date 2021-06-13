@@ -22,3 +22,7 @@ func _physics_process(delta):
     if abs(angular_velocity) > PI:
         angular_velocity -= stepify(angular_velocity, PI) # if you're wondering why this isn't just fmod, that's a good question
     angular_velocity *= 15
+    
+    var cw = int(Input.is_action_pressed("turn_cw"))
+    var ccw = int(Input.is_action_pressed("turn_ccw"))
+    linear_velocity += position.direction_to(center.position).tangent() * (cw - ccw) * 120

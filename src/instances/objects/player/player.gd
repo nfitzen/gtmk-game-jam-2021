@@ -10,6 +10,8 @@ export var wheel_radius = 60
 export var post_this_rat : PackedScene
 var rats = []
 
+signal rotate
+
 func _ready():
     pass # Replace with function body.
 
@@ -26,6 +28,7 @@ func _physics_process(delta):
     var velocity = Vector2(right-left, down-up).normalized() * speed
     velocity.y *= vertical_mul
     move_and_slide(velocity)
+    
 
 func add_rat():
     var rat = post_this_rat.instance()
@@ -34,3 +37,4 @@ func add_rat():
     rat.center = self
     rats.append(rat)
     wheel_radius = max(wheel_radius, len(rats) * 15 / PI)
+    connect("rotate", rat, "_on_player_rotate")
