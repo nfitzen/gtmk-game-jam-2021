@@ -4,6 +4,9 @@
 
 extends Node2D
 
+export var speed = 220
+export var vertical_mul = 1.0 # if we want to account for the perspective or some shit
+
 func _ready():
     pass # Replace with function body.
 
@@ -12,4 +15,6 @@ func _process(delta):
     var left = int(Input.is_action_pressed("left"))
     var up = int(Input.is_action_pressed("up"))
     var down = int(Input.is_action_pressed("down"))
-    position += Vector2(right-left, down-up) * delta * 100
+    var velocity = Vector2(right-left, down-up).normalized() * delta * speed
+    velocity.y *= vertical_mul
+    position += velocity
