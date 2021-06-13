@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 daatguy
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 extends Area2D
 
 func _ready():
