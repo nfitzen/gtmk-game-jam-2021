@@ -5,7 +5,7 @@ export var ass = Vector2(0,0)
 
 func manage_tail(dist):
     $"tail".clear()
-    for i in range(int(dist/64*1.412)):
+    for i in range(int(dist/64*1.412-0.3)):
         $"tail".set_cell(-1-i, i, $"tail".get_tileset().find_tile_by_name("tail"))
 
 func _physics_process(delta):

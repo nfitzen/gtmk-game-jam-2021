@@ -8,6 +8,8 @@ export var speed = 200
 export var vertical_mul = 1.0 # if we want to account for the perspective or some shit
 export var wheel_radius = 60
 export var post_this_rat : PackedScene
+const cameraZoom = 0.48;
+var cameraTarget : Vector2 = position;
 var rats = []
 
 signal rotate
@@ -20,9 +22,14 @@ func _process(delta):
     if Input.is_action_just_pressed("testing_space"):
         add_rat()
     $"clump".frame = int(clamp(len(rats),0,9))
+    $"../camera".zoomTarget = cameraZoom*wheel_radius/60.0
     #$"clump".scale = Vector2(1,1)*pow(wheel_radius,1.2)/40
 
 func _physics_process(delta):
+    var mouseOffset = (get_viewport().get_mouse_position()-get_viewport_rect().size/2)/4
+    var mouseAmt = 0.002
+    mouseOffset = mouseOffset*mouseOffset.length()*mouseAmt
+    cameraTarget = position + mouseOffset;
     var right = int(Input.is_action_pressed("right"))
     var left = int(Input.is_action_pressed("left"))
     var up = int(Input.is_action_pressed("up"))

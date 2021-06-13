@@ -55,8 +55,11 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
+radius = 5.994
 
 [node name="basic_inner_rat" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -67,10 +70,6 @@ frames = SubResource( 1 )
 animation = "walk"
 frame = 1
 playing = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-polygon = PoolVector2Array( 25.7949, -11.2369, 16.5346, -9.76368, 7.41458, -14.3237, -2.82789, -14.3938, -9.77312, -12.9206, -24.5054, -8.29045, -24.6457, 4.12679, -16.5079, 4.33725, -16.3676, 7.14341, -12.2285, 7.49417, -12.439, 4.40741, -5.21312, 4.19694, -5.14297, 5.3194, -1.91589, 5.3194, -1.98604, 3.98648, 5.02935, 4.19694, 26.4964, -3.30952 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 1.5708
