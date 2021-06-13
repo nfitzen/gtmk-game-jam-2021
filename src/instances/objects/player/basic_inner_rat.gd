@@ -11,4 +11,7 @@ func _physics_process(delta):
     if position.distance_to(center.position) < center.wheel_radius:
         linear_velocity *= 3 * len(center.rats)
     for rat in center.rats:
-        linear_velocity += rat.position.direction_to(position) * 500 / len(center.rats)
+        if rat != self:
+            var nudge = rat.position.direction_to(position) * 500000
+            nudge /= position.distance_squared_to(rat.position)
+            linear_velocity += nudge
