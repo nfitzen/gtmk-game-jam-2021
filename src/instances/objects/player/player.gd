@@ -18,4 +18,4 @@ func _physics_process(delta):
     var velocity = Vector2(right-left, down-up).normalized() * speed
     velocity.y *= vertical_mul
     move_and_slide(velocity)
-    print(position)
+    
