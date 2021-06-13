@@ -1,16 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://instances/objects/player/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://instances/scenes/generator.gd" type="Script" id=2]
 [ext_resource path="res://instances/scenes/root.gd" type="Script" id=3]
 [ext_resource path="res://instances/objects/camera/camera.tscn" type="PackedScene" id=4]
-[ext_resource path="res://instances/objects/enemies/bullet/enemybullet.tscn" type="PackedScene" id=5]
 
 [node name="main" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 103.43, 69.7944 )
+position = Vector2( 43.5837, -17.7702 )
 
 [node name="Generator" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -18,11 +17,3 @@ script = ExtResource( 2 )
 [node name="camera" parent="." instance=ExtResource( 4 )]
 current = true
 zoom = Vector2( 0.48, 0.48 )
-
-[node name="enemybullet" parent="." instance=ExtResource( 5 )]
-
-[node name="enemybullet2" parent="." instance=ExtResource( 5 )]
-position = Vector2( -42.8598, 69.8456 )
-
-[node name="enemybullet3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 76.1953, -46.0346 )
