@@ -3,7 +3,7 @@ extends Camera2D
 var maxSpeed = 0.07;
 var minSpeed = 0.0;
 var workingSpeed = maxSpeed;
-const bgColor = "#0f000d"
+const bgColor = "#4b1b42"
 var nextFramePos = null
 var zoomTarget = 0.48
 var zoomAmt = 0.48
@@ -23,7 +23,6 @@ func _physics_process(delta):
         position += ($"../player".cameraTarget-position)*workingSpeed
     zoomAmt += (zoomTarget-zoomAmt)*0.05
     zoom = Vector2(zoomAmt, zoomAmt)
-    print(zoom)
 
 func toggleSpeed():
     setSpeed(workingSpeed==minSpeed)

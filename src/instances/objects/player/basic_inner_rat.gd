@@ -8,11 +8,18 @@ func manage_tail(dist):
     for i in range(int(dist/64*1.412-0.3)):
         $"tail".set_cell(-1-i, i, $"tail".get_tileset().find_tile_by_name("tail"))
 
+func _process(delta):
+    if(linear_velocity.length()>10 and abs(linear_velocity.angle()-rotation)<1.4):
+        if($sprite.animation!="walk"):
+            $"sprite".animation = "walk"
+    else:
+        if($sprite.animation!="idle"):
+            $"sprite".animation = "idle"
+
 func _physics_process(delta):
     var to_center = position.direction_to(center.position)
     # Tails
     manage_tail(position.distance_to(center.position))
-    
     
     linear_velocity = to_center * (
             position.distance_to(center.position) - center.wheel_radius
