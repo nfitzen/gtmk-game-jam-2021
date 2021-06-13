@@ -4,9 +4,10 @@
 
 extends Node2D
 
-onready var root = get_tree().get_root()
+onready var scene = $"../.."
 
 const GenericEnemy = preload("res://instances/objects/enemies/genericenemy/genericenemy.tscn")
+const BannerEnemy = preload("res://instances/objects/enemies/bannerenemy/bannerenemy.tscn")
 
 var min_radius = 40
 var max_radius = 220
@@ -22,14 +23,20 @@ func place_enemies():
     var distance
     var displacement
 
-    for _i in range(count):
+    for i in range(count):
+
+        var enemy
+
         angle = rand_range(0, 2*PI)
         direction = Vector2.RIGHT.rotated(angle)
         distance = rand_range(min_radius, max_radius)
         displacement = distance * direction
 
-        var enemy = GenericEnemy.instance()
+        if i == count - 1:
+            enemy = BannerEnemy.instance()
+        else:
+            enemy = GenericEnemy.instance()
 
         enemy.global_position = global_position + displacement
 
-        root.add_child(enemy)
+        scene.add_child(enemy)
