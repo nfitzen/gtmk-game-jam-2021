@@ -1,6 +1,14 @@
 # SPDX-FileCopyrightText: 2017 Version Control System Fund
+# SPDX-FileCopyrightText: 2021 nfitzen
 #
 # SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: CC0-1.0
+
+# The following is licensed under CC0-1.0:
+
+./releases/
+
+# The following is licensed under Expat/MIT:
 
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,godot,visualstudiocode,notepadpp
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,godot,visualstudiocode,notepadpp
