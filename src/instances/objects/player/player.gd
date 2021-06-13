@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 export var speed = 200
 export var vertical_mul = 1.0 # if we want to account for the perspective or some shit
-export var wheel_radius = 100
+export var wheel_radius = 40
 export var post_this_rat : PackedScene
 var rats = []
 
@@ -30,8 +30,8 @@ func _physics_process(delta):
 func add_rat():
     var rat = post_this_rat.instance()
     $"..".call_deferred("add_child", rat)
-    rat.position = position + Vector2(wheel_radius, 1)
+    rat.position = position + Vector2(wheel_radius + 25, 1)
     rat.center = self
     rats.append(rat)
-    if len(rats) > 9:
-        wheel_radius += 5
+    if len(rats) > 13:
+        wheel_radius += 1
