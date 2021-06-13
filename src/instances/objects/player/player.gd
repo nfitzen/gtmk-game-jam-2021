@@ -26,11 +26,11 @@ func _physics_process(delta):
     var velocity = Vector2(right-left, down-up).normalized() * speed
     velocity.y *= vertical_mul
     move_and_slide(velocity)
-    
+
 func add_rat():
     var rat = post_this_rat.instance()
     $"..".call_deferred("add_child", rat)
     rat.position = position + Vector2(wheel_radius + 25, 1)
     rat.center = self
     rats.append(rat)
-    wheel_radius = max(wheel_radius, len(rats) * 4)
+    wheel_radius = max(wheel_radius, len(rats) * 15 / PI)
