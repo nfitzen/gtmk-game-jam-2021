@@ -13,6 +13,7 @@ func _physics_process(delta):
         linear_velocity *= 10 * len(center.rats)
     for rat in center.rats:
         if rat != self:
-            var nudge = rat.position.direction_to(position) * 500000
-            nudge /= max(position.distance_to(rat.position), position.distance_squared_to(rat.position))
+            var nudge = rat.position.direction_to(position) * 500
+            #nudge /= position.distance_to(rat.position)
+            nudge -= to_center * nudge.dot(to_center)
             linear_velocity += nudge
