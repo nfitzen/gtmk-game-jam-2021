@@ -11,7 +11,7 @@ func _ready():
 
 func _physics_process(delta):
     position+= vel
-    
+
 func _on_area_entered(body):
     $"../player".remove_rat()
     queue_free()

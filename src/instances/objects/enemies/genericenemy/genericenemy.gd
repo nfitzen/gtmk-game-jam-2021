@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2021 daatguy
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 extends KinematicBody2D
 
 export var player_range = 100
